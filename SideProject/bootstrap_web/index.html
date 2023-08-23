@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cryptozen</title>
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="./CSS/reset.css">
+  <!-- 自己的外部樣式表 -->
+  <link rel="stylesheet" href="./CSS/style_big.css">
+  <link rel="stylesheet" href="./CSS/style_md.css">
+  <link rel="stylesheet" href="./CSS/style_xs.css">
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Noto+Serif+TC&display=swap"
+    rel="stylesheet">
+  <!-- 模板預設字體 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/0003f44bf4.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- top -->
+  <div id="top">
+    <!-- navbar --------------------------------------->
+    <div class="navbar_lg row">
+      <div class="left">
+        <img src="https://html.dreamitsolution.net/cryptozen/assets/images/other.png">
+      </div>
+      <div class="right">
+        <p class="navbar_btn navbar_btn_hover">
+          Demo <i class="fa-solid fa-angle-down"></i>
+        </p>
+        <p class="navbar_btn navbar_btn_hover">About</p>
+        <p class="navbar_btn navbar_btn_hover">Pages<i class="fa-solid fa-angle-down"></i></p>
+        <p class="navbar_btn navbar_btn_hover">Road Map</p>
+        <p class="navbar_btn navbar_btn_hover">Team</p>
+        <p class="navbar_btn navbar_btn_hover">Contact</p>
+        <button id="navbar_getToken">Get Token</button>
+        <p class="navbar_btn"> <i class="fas fa-search"></i></p>
+        <p class="navbar_btn"><i class="fa-solid fa-bars"></i></p>
+      </div>
+    </div>
+
+    <div class="navbar_md row">
+      <i class="fa-solid fa-bars" style="text-decoration: none; color: white; font-weight: 800; font-size: 1.5rem;"></i>
+    </div>
+  </div>
+
+
+  <!-- header -->
+  <div id="header" class="row">
+    <!-- header_left --------------------------------------------------------------->
+    <div class="header_left">
+      <div class="header_left_container">
+        <div class="header_subTitle">
+
+          <h4 class="header_subTitle_h4"> <span class="other">$</span> Secure & Safe Crypto Currency</h4>
+        </div>
+        <div class="title">
+          <h1 style="white-space: nowrap;">Make your
+            <span style="color: var(--primary);">Crypto</span>
+          </h1>
+          <h1>Transaction</h1>
+        </div>
+        <p>Buy and Sales 100+ Cryptocurrencies with 20+ flat currencies market
+          using bank transfers or your credit/debit card in your exchange type
+          bitcoin establshed token area. </p>
+        <div class="row">
+          <button id="btn_howItWorks" class="btn_hover">
+            <i class="fa-solid fa-play"></i>
+            How it Works</button>
+          <button id="btn_whitePapers" class="btn_hover">
+            <i class="fa-solid fa-file-circle-question" style="font-size: 13px;"></i>
+            White Papers</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- header_right ----------------------------------------------------------->
+
+    <div class="header_right">
+      <div id="slider_thumb">
+        <img src="https://html.dreamitsolution.net/cryptozen/assets/images/banner/one.png">
+
+        <div class="rotation_circle01">
+          <img src="https://html.dreamitsolution.net/cryptozen/assets/images/banner/two.png">
+        </div>
+        <div class="rotation_circle02">
+          <img src="https://html.dreamitsolution.net/cryptozen/assets/images/banner/five.png">
+        </div>
+
+        <div class="shape03">
+          <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/two.png">
+        </div>
+        <div class="shape04">
+          <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/three.png">
+
+        </div>
+        <div class="shape05">
+          <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/four.png">
+
+        </div>
+        <div class="header_tokenTable">
+          <h4>Token Sale Start Now In</h4>
+          <div class="row">
+            <ul>
+              <li>
+                <span id="days">-05</span>
+                <p>Days</p>
+              </li>
+              <li>
+                <span id="hours">-20</span>
+                <p>Hours</p>
+              </li>
+              <li>
+                <span id="mins">-13</span>
+                <p>Mins</p>
+              </li>
+              <li>
+                <span id="sec">-14</span>
+                <p>Sec</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+    <div class="header_curvedLine bounce-animate3">
+      <img src="https://html.dreamitsolution.net/cryptozen/assets/images/banner/four.png">
+    </div>
+  </div>
+
+  <!-- coinTable -->
+  <div id="coinTable">
+    <div class="coinTableCard box_hover">
+      <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/bit.png">
+      <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/back.png" class="shape">
+      <h4>Bitcoin</h4>
+      <h3>USD 90,360.50</h3>
+      <h4 class="type">BTC</h4>
+    </div>
+    <div class="coinTableCard box_hover">
+      <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/bit2.png">
+      <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/back2.png" class="shape">
+      <h4>Ethereum</h4>
+      <h3>USD 630.00</h3>
+      <h4 class="type">ETH</h4>
+    </div>
+    <div class="coinTableCard box_hover">
+      <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/bit3.png">
+      <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/back3.png" class="shape">
+      <h4>Tether</h4>
+      <h3>USD 299.08</h3>
+      <h4 class="type">THR</h4>
+    </div>
+  </div>
+
+  <!-- ICO -->
+  <div id="ico">
+    <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/round.png" class="shape05">
+    <h5 class="blue_sub_title">
+      <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/title-img.png">
+      &nbsp About ICO
+    </h5>
+    <h1>About Crypto ICO</h1>
+    <p style="color: rgb(255, 255, 255,0.7); font-weight: 300; text-align: center; line-height: 2; font-weight: 400;
+    font-style: normal;
+    transition: .5s;">
+      Monotonectally productivate virtual benefits vis-a-vis clicks ship.<br>
+      Seamlessly generate
+      user friendly </p>
+
+    <div class="row">
+      <div class="left">
+        <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/about.png">
+        <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/about-shape.png">
+      </div>
+
+      <div class="right">
+        <div class="card">
+          <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/icon.png">
+          <div class="text">
+
+            <h2 style="font-size: 20px;">Money Exchange</h2>
+            <p>Continually pontificate corporate deliverables through clicks-and-mortar intellectual.</p>
+
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/icon2.png">
+          <div class="text">
+
+            <h2 style="font-size: 20px;">Balance Transfer</h2>
+            <p>Continually
+              pontificate corporate deliverables through clicks-and-mortar intellectual.
+            </p>
+          </div>
+
+        </div>
+        <div class="card">
+          <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/icon3.png">
+          <div class="text">
+
+            <h2 style="font-size: 20px;">Balance Transfer</h2>
+            <p>Continually
+              pontificate corporate deliverables through clicks-and-mortar intellectual.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TokenRating -->
+
+  <div id="tokenRating">
+    <h5 class="blue_sub_title">
+      <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/title-img.png">
+      &nbsp Token Rating
+    </h5>
+    <h1>Crypto Token Rating</h1>
+
+    <div class="row">
+      <div class="box box_hover">
+        <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/token-three.png">
+        <h5 class="blue_sub_title btn_hover">4.5</h5>
+      </div>
+      <div class="box box_hover">
+        <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/token-five.png">
+        <h5 class="blue_sub_title btn_hover">
+          <i class="fa-regular fa-circle-check"></i>
+        </h5>
+      </div>
+      <div class="box box_hover">
+        <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/token-four.png">
+        <h5 class="blue_sub_title btn_hover">2.5</h5>
+      </div>
+      <div class="box box_hover">
+        <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/token1.png">
+        <h5 class="blue_sub_title btn_hover">4.5</h5>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- CryptoTokenRating ---------------------->
+  <div id="crypto_tokenRating">
+    <h5 class="blue_sub_title">
+      <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/title-img.png">
+      &nbsp Token Rating
+    </h5>
+    <h1>Crypto Token Rating</h1>
+    <p style="width:40%; color: rgb(255, 255, 255,0.7); font-weight: 300; text-align: center; line-height: 2; font-weight: 400;
+    font-style: normal;
+    transition: .5s;">Monotonectally productivate virtual benefits vis-a-vis clicks ship. Seamlessly generate user
+      friendly</p>
+
+    <div class="row">
+      <div class="box box_hover">
+        <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/dolar.png">
+        <div class="text">
+          <h2 style="font-size: 24px;">Balance Transfer</h2>
+          <p>Competently embrace sticky models whereas is leadership. Energistically coordinate unique meth without
+            sclient-centereds netwo embrace stickys leadership energistically done.</p>
+        </div>
+      </div>
+
+      <div class="box box_hover">
+        <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/dolar2.png">
+        <div class="text">
+          <h2 style="font-size: 24px;">Universal Access</h2>
+          <p>Competently embrace sticky models whereas is leadership. Energistically coordinate unique meth without
+            sclient-centereds netwo embrace stickys leadership energistically done.</p>
+        </div>
+      </div>
+
+      <div class="box box_hover">
+        <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/dolar3.png">
+        <div class="text">
+          <h2 style="font-size: 24px;">Early Bonus Paid</h2>
+          <p>Competently embrace sticky models whereas is leadership. Energistically coordinate unique meth without
+            sclient-centereds netwo embrace stickys leadership energistically done.</p>
+        </div>
+      </div>
+
+      <div class="box box_hover">
+        <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/dolar4.png">
+        <div class="text">
+          <h2 style="font-size: 24px;">Several Profit Token</h2>
+          <p>Competently embrace sticky models whereas is leadership. Energistically coordinate unique meth without
+            sclient-centereds netwo embrace stickys leadership energistically done.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- appDownload ---------------------------->
+  <div id="appDownload">
+    <div class="container">
+      <div class="left">
+        <h2 style="font-size: 36px; font-weight: 300;">Also available on IOS <br> and Android</h2>
+        <p>
+          Completely whiteboard robust interfaces without multidiscipli has to manufactured products. Progressively
+          myocardinate cooperat crypt technologies through principle-
+        </p>
+        <div class="row">
+          <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/shape4.png">
+          <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/shape3.png">
+        </div>
+      </div>
+      <div class="right">
+        <div class="phone">
+          <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/phone.png">
+        </div>
+        <div class="phone_shape">
+          <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/shape2.png" alt="">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- our Team -->
+  <div id="ourTeam">
+    <h5 class="blue_sub_title">
+      <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/title-img.png">
+      &nbsp Our Team
+    </h5>
+    <h1>Meet Our Team Player</h1>
+    <p style="width:40%; color: rgb(255, 255, 255,0.7); font-weight: 300; text-align: center; line-height: 2; font-weight: 400;
+    font-style: normal;
+    transition: .5s;">
+      Monotonectally productivate virtual benefits vis-a-vis clicks ship. Seamlessly generate user friendly
+    </p>
+    <div class="row">
+      <div class="box">
+        <div class="mask">
+          <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/team.png">
+        </div>
+        <h3>Nicole Gerling</h3>
+        <span>Head of Marketing</span>
+        <div class="row">
+          <h5><i class="fa-solid fa-envelope"></i> Mail</h5>
+          <h5><i class="fa-brands fa-facebook-f"></i></h5>
+          <h5><i class="fa-brands fa-linkedin-in"></i></h5>
+        </div>
+      </div>
+      <div class="box">
+        <div class="mask">
+          <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/team4.png">
+        </div>
+        <h3>John Abraham</h3>
+        <span>HR manager</span>
+        <div class="row">
+          <h5 class="blue_sub_title"><i class="fa-solid fa-envelope"></i> Mail</h5>
+          <h5 class="blue_sub_title"><i class="fa-brands fa-facebook-f"></i></h5>
+          <h5 class="blue_sub_title"><i class="fa-brands fa-linkedin-in"></i></h5>
+        </div>
+
+      </div>
+      <div class="box">
+        <div class="mask">
+          <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/team3.png">
+        </div>
+        <h3>Samuel Mariles</h3>
+        <span>Coin Marketer</span>
+        <div class="row">
+          <h5 class="blue_sub_title"><i class="fa-solid fa-envelope"></i> Mail</h5>
+          <h5 class="blue_sub_title"><i class="fa-brands fa-facebook-f"></i></h5>
+          <h5 class="blue_sub_title"><i class="fa-brands fa-linkedin-in"></i></h5>
+        </div>
+
+      </div>
+      <div class="box">
+        <div class="mask">
+          <img src="https://html.dreamitsolution.net/cryptozen/assets/images/new/team2.png">
+        </div>
+        <h3>Jakulin Farna</h3>
+        <span>Head of Marketing</span>
+        <div class="row">
+          <h5 class="blue_sub_title"><i class="fa-solid fa-envelope"></i> Mail</h5>
+          <h5 class="blue_sub_title"><i class="fa-brands fa-facebook-f"></i></h5>
+          <h5 class="blue_sub_title"><i class="fa-brands fa-linkedin-in"></i></h5>
+        </div>
+
+      </div>
+    </div>
+    <div class="row more">
+      <img src="https://html.dreamitsolution.net/cryptozen/assets/images/team/btn.png">
+      <h5>More Member &nbsp; <i class="fa-solid fa-arrow-right"></i></h5>
+    </div>
+
+  </div>
+
+  <!-- footer -->
+  <div id="footer">
+    <div class="box">
+      <img src="https://html.dreamitsolution.net/cryptozen/assets/images/other.png" style=" width:70% ">
+      <p>There are many variations of pass of Lorem Ipsum available, but the majority have suffered</p>
+
+      <h3>Follow us</h3>
+      <div class="row">
+        <a href="#" class="footer_icon"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="footer_icon"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="footer_icon"><i class="fa-brands fa-pinterest"></i></a>
+        <a href="#" class="footer_icon"><i class="fa-brands fa-linkedin-in"></i></a>
+
+      </div>
+    </div>
+    <div class="box">
+      <h3>Help Links</h3>
+      <ul>
+        <li>What Is ICO</li>
+        <li>Token</li>
+        <li>Road Map</li>
+        <li>Advisor</li>
+      </ul>
+
+    </div>
+    <div class="box">
+      <h3>Quicck Links</h3>
+      <ul>
+        <li>ICO Apps</li>
+        <li>White Papers</li>
+        <li>Teams</li>
+        <li>Join Us</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Newsletter</h3>
+      <p>Sent Us a Newsletter And Get Update</p>
+      <div class="row">
+      </div>
+    </div>
+  </div>
+  <hr style=" margin-top: -5%;
+  width: 70%;
+  color: blue;
+  background-color: rgb(255 255 255 / 67%);
+  height: 1px;
+  border: 0;">
+  <div class="row" style="justify-content: flex-start; margin-left: 15%;">
+    <p>Copyright © 泰山職訓前端開發技術青年專班 切版練習</p>
+  </div>
+
+
+  <!-- gotoTop -->
+  <div id="gotoTop">
+    <i class="fa-solid fa-arrow-up" style="margin-top: 30%; margin-left: 2%;"></i>
+  </div>
+
+
+
+
+  <script src="/jquery-3.6.1.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+@media (max-width: 375px) {
+  h1 {
+    font-size: 34px !important;
+  }
+
+
+
+  /* #header */
+
+  #header .header_left .header_left_container {
+    margin-bottom: 40%;
+  }
+
+  #slider_thumb {
+    /* width: 100%; */
+    left: -4%;
+
+  }
+
+  #header .rotation_circle01,
+  #header .rotation_circle02,
+  #header .header_tokenTable {
+    display: none;
+  }
+
+  #header .shape05 {
+    right: 15%;
+  }
+
+  #header .shape04 {
+    right: 20%;
+  }
+
+  #header .shape03 {
+    left: 8%;
+    top: -13%;
+  }
+
+  /* #coinTable */
+  #coinTable .coinTableCard {
+    width: 80%;
+    margin: 3%;
+  }
+
+  #ico .row .left,
+  #ico .row .right {
+    width: 100%;
+    justify-content: center;
+    /* height: 100%; */
+  }
+
+  /* 
+  #ico .row .left :nth-child(2) {
+    display: none;
+  } */
+
+  #ico .row .right {
+    padding-left: 5%;
+  }
+
+  #tokenRating .box {
+    width: 90%;
+    margin: 5% 10%;
+  }
+
+  #crypto_tokenRating p {
+    width: 100%;
+  }
+
+  #crypto_tokenRating .row .box {
+    width: 90%;
+    padding: 8% 5% 1% 0;
+  }
+
+  /* #appDownload .phone {
+    top: 0;
+    left: 40%;
+  } */
+  #appDownload .container {
+    width: 90%;
+  }
+
+  #appDownload .left {
+    width: 100%;
+  }
+
+  /* #appDownload .right {
+    width: 100%;
+    height: 10vh;
+    background: #000;
+  } */
+
+  #appDownload .right img {
+    width: 70%;
+  }
+
+  #appDownload .phone {
+    margin-right: -19%;
+    top: 70%;
+    left: 57%;
+  }
+
+  #appDownload .phone_shape {
+    display: none;
+  }
+
+  #ourTeam .box {
+    margin-right: 7%;
+    width: 90%;
+    /* margin: 2%; */
+  }
+
+  #ourTeam p {
+    width: 80% !important;
+  }
+
+  #gotoTop {
+    top: 95%;
+    right: 10%;
+  }
+
+  #footer .box {
+    width: 80%;
+  }
+
+
+}

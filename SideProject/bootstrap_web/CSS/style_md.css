@@ -1,0 +1,196 @@
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px !important;
+  }
+
+  h2 {
+    font-size: 25px !important;
+  }
+
+  p {
+    line-height: 1.5 !important;
+    font-size: 16px !important;
+  }
+
+  .row {
+    width: 100% !important;
+    padding: 0;
+  }
+
+  #top {
+    height: 8vh;
+  }
+
+
+  .navbar_lg {
+    display: none;
+  }
+
+  .navbar_md {
+    display: flex;
+
+    background: #37A3FE;
+    /* float: left; */
+    min-height: 60px;
+    padding: 10px 30px 0 0;
+    position: relative;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+
+    z-index: 999999;
+    /* position: fixed; */
+  }
+
+  .navbar_md::before {
+    color: #fff;
+    content: "CRYPTOZEN";
+    font-size: 22px;
+    font-weight: 800;
+    left: 10px;
+    position: absolute;
+    top: 18px;
+  }
+
+  #header {
+    padding-top: 5vh;
+  }
+
+  #header .header_left,
+  #header .header_right {
+    width: 100%;
+  }
+
+  #header .header_left .header_left_container {
+    padding-left: 8%;
+    margin-bottom: 15%;
+  }
+
+  #btn_whitePapers {
+    display: none;
+  }
+
+  #coinTable {
+    flex-wrap: wrap;
+  }
+
+  #coinTable .coinTableCard {
+    width: 45%;
+    /* margin: 3%; */
+  }
+
+  /* #ico */
+  #ico {
+    padding-top: 10vh;
+  }
+
+  #ico .row {
+    margin-top: 3%;
+  }
+
+  #ico .row .left,
+  #ico .row .right {
+    width: 50%;
+  }
+
+  #ico .row .right {
+    padding-top: 10%;
+  }
+
+  #ico .left img {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  #ico .text {
+    margin-left: 10%;
+  }
+
+  #ico .row .left :nth-child(2) {
+    display: none;
+  }
+
+  #tokenRating {
+    padding: 8vh 0;
+
+  }
+
+  #tokenRating .box {
+    width: 40%;
+    margin: 2%;
+  }
+
+  #tokenRating .box img {
+    width: 50%;
+    margin: auto;
+    height: auto;
+  }
+
+  #tokenRating .box .blue_sub_title {
+    width: 50%;
+    margin: 10% 15% 10% auto;
+    color: white;
+    border: 1px solid #0d3e92;
+    font-weight: 600;
+    background: transparent;
+    position: relative;
+  }
+
+  #crypto_tokenRating .box {
+    padding: 5% 2% 1% 0;
+  }
+
+  #crypto_tokenRating .box img {
+    width: 30%;
+  }
+
+  #appDownload {
+    padding-bottom: 15%;
+  }
+
+  #appDownload .container {
+    width: 90%;
+  }
+
+  #appDownload .phone {
+    top: 0;
+    left: 40%;
+  }
+
+  #appDownload .row img {
+    margin-bottom: 5%;
+  }
+
+  #ourTeam .box {
+    width: 45%;
+    margin-left: 2%;
+    margin-right: 3%;
+  }
+
+  #ourTeam .more {
+    /* width: 30%; */
+    justify-content: center;
+  }
+
+  #ourTeam .more img {
+    margin-right: 10%
+  }
+
+  #gotoTop {
+    top: 96%;
+    right: 8%;
+  }
+
+  #footer .box {
+    width: 45%;
+  }
+
+
+
+
+
+
+
+
+}

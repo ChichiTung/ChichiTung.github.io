@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@flaticon/flaticon-uicons": "^1.7.0",
+    "@fortawesome/fontawesome-svg-core": "^6.2.1"
+  }
+}

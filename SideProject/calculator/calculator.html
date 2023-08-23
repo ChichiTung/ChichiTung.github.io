@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>唱歌計算機</title>
+    <style>
+        @font-face {
+            font-family: 'Gaoel';
+            src: url('./fonts/gaoel.ttf')format("truetype"),
+                url('./fonts/gaoel.woff')format("woff");
+        }
+
+
+        body {
+            /* background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+
+            background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); */
+            background-image: linear-gradient(120deg, #d7fafc 0%, #a8c9f8 100%);
+        }
+
+        table {
+            width: 280px;
+            max-width: 280px;
+            height: 500px;
+            /* padding: 5px; */
+            background-image: linear-gradient(to top, rgba(150, 200, 200, 0.5) 0%, #66a6ff 200%);
+
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+            border-collapse: collapse;
+            border-spacing: 5px;
+            border-radius: 10px;
+
+            border: none;
+
+            position: absolute;
+            top: calc(50vh - 250px);
+            right: calc(50vw - 150px);
+
+
+            /* white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden; */
+        }
+
+
+        table td {
+            /* padding: 4px; */
+            border: 2px rgba(255, 255, 255, 0.5) solid;
+            width: 20px;
+            height: 25px;
+            background: rgba(255, 255, 210, 0.1);
+
+
+            text-align: center;
+            font-family: 'Gaoel';
+            font-size: larger;
+            color: white;
+
+            text-shadow: rgb(142, 142, 142) 0.1em 0.1em 0.2em
+        }
+
+        #del img {
+            width: 23px;
+            height: auto;
+            filter: drop-shadow(0.1em 0.1em 0.2em rgba(142, 142, 142, 0.7));
+            position: relative;
+            top: 5px;
+        }
+
+        #formula {
+            text-align: right;
+            font-size: 10px;
+            text-shadow: none;
+            color: rgba(107, 107, 107, 0.5);
+
+        }
+
+        #text {
+            text-align: right;
+            font-size: 20px;
+            text-shadow: none;
+            color: rgb(107, 107, 107);
+        }
+
+        body {
+            cursor: url('./pointer-web-white.svg') 4 12, auto;
+        }
+    </style>
+</head>
+
+<body>
+    <table cellpadding="2" callspacing="1">
+        <tr style="padding-top: red 10px ;">
+            <td id="formula" colspan="4"
+                style=" min-height: 30px; background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 200%);  border-radius: 10px 10px 0 0 ; max-width: 200px; ">
+            </td>
+        </tr>
+        <tr>
+            <td id="text" colspan="4" style=" min-height:30px;
+                background-image: linear-gradient(135deg, #f5f7fa -20%, #c3cfe2 200%);
+                border-radius: 0px; max-width: 200px;">
+            </td>
+        </tr>
+        <tr style="">
+            <td style="font-family:'Franklin Gothic Medium';border-top: none;">C</td>
+            <td style="font-family:'Franklin Gothic Medium';border-top: none;">/</td>
+            <td style="font-family:'Franklin Gothic Medium'; font-weight: bolder;border-top: none; ">*</td>
+            <td style="font-weight: 500;border-top: none;">-</td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td rowspan="2" style="font-family:'Franklin Gothic Medium'">+</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td rowspan="2" style="font-family:'Franklin Gothic Medium'">=</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>.</td>
+            <td id="del"><img src="./delete.png" alt="delete"></td>
+        </tr>
+    </table>
+    <audio src="./meow.mp3" volume="1" id="audio"></audio>
+    <script>
+        const text = document.getElementById('text')
+        const formula = document.getElementById('formula')
+        const del = document.getElementById('del')
+        // 'td:not(#text)'：  td 中不是 id 為 text 的東西
+        const btns = document.querySelectorAll('td:not(#text)')
+
+
+        let reset = false;
+        for (const btn of btns) {
+            btn.onclick = () => {
+
+                btn.style.backgroundColor = 'rgba(100, 100, 100, 0.1)';
+                setTimeout(() => {
+                    btn.style.backgroundColor = "";
+                }, 120);
+                const btnText = btn.innerText
+                if (btnText === '=') {
+                    formula.innerText = text.innerText + `=`
+                    text.innerText = eval(text.innerText);
+                    reset = true;
+
+                } else if (btnText === 'C') {
+                    formula.innerText = ''
+                    text.innerText = '0'
+                } else {
+                    if (text.innerText === '-' && isNaN(parseInt(btnText))) return
+
+                    if (text.innerText !== '0' && !reset) {
+                        text.innerText += btnText
+                    } else if (!['+', '*', '/'].includes(btnText) || reset) {
+                        formula.innerText += text.innerText
+                        text.innerText = btnText
+                        reset = false;
+                    }
+
+                }
+            }
+        }
+
+        del.onclick = () => {
+
+            del.style.backgroundColor = 'rgba(100, 100, 100, 0.1)';
+            setTimeout(() => {
+                del.style.backgroundColor = "";
+            }, 120);
+
+            // console.log(text.innerText)
+            // console.log(typeof text)
+
+            // const str = text.innerText.slice(0, -1)
+            if (text.innerText != "") {
+                text.innerText = text.innerText.slice(0, -1)
+            }
+        }
+
+
+        document.onkeydown = event => {
+            const btnText = event.key
+
+            if (btnText === 'Enter' || btnText === '=') {
+                formula.innerText = text.innerText + `=`
+                text.innerText = eval(text.innerText)
+                reset = true;
+            } else if (btnText === 'c' || btnText === 'C') {
+                text.innerText = '0'
+            } else {
+
+                if (text.innerText === '-' && isNaN(parseInt(btnText))) return
+
+                if (text.innerText !== '0' && ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'Enter', '+', '-', '*', '/', '.'].includes(btnText) && !reset) {
+                    text.innerText += btntext
+                }
+                else if (!['+', '*', '/'].includes(btnText) && ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'Enter', '+', '-', '*', '/', '.'].includes(btnText) || reset) {
+                    text.innerText = btnText
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -74,7 +74,7 @@
   --bs-font-sans-serif: system-ui, -apple-system, "TaipeiSansTCBeta-Bold", "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: TaipeiSansTCBeta-Bold, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-body-font-family: TaipeiSansTCBeta-Bold -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -133,7 +133,7 @@ h6,
 .h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "TaipeiSansTCBeta-Light", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "TaipeiSansTCBeta-Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   line-height: 1.2;
   color: #343a40;
@@ -4803,14 +4803,56 @@ fieldset:disabled .btn {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 0;
+  min-width: ;
   height: var(--bs-card-height);
+  min-height: 22rem;
   word-wrap: break-word;
   background-color: var(--bs-card-bg);
   background-clip: border-box;
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
+  overflow: hidden
 }
+
+.card img {
+  height: 50%;
+}
+
+.card_animation {
+  background-color: rgb(247, 229, 197);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* transition: all 0.5s ease-in; */
+}
+
+.card_animation p {
+  color: rgb(44, 44, 44);
+}
+
+
+.card_animation :hover {
+  /* transform: translateY(50px); */
+  /* box-shadow: #0c4128 5px 5px 5px; */
+  background-color: #fff;
+  transition: all 0.3s ease-in;
+}
+
+.card_animation:hover::before {
+  position: absolute;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  text-align: center;
+  content: '點我看更多(・ω・)ノ';
+  transition: all 0.3s ease-in;
+}
+
+
+
+
+
+
 
 .card>hr {
   margin-right: 0;
@@ -4923,6 +4965,8 @@ fieldset:disabled .btn {
   border-top-left-radius: var(--bs-card-inner-border-radius);
   border-top-right-radius: var(--bs-card-inner-border-radius);
 }
+
+
 
 .card-img,
 .card-img-bottom {
